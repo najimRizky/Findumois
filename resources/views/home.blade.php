@@ -2,8 +2,6 @@
 @section('title','Home')
 @section('content')
     <div class="container">
-        <h1 id="tes">
-            Selamat Datang di Findumois
-        </h1>
+        <h1>Selamat Datang di Findumois</h1>
     </div>
 @endsection

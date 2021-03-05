@@ -7,13 +7,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item mx-4" >
-                    <a class="nav-link {{request()->is('/') ? 'active' : '' }} underlineHover" href="/">Home </a>
+                    <a class="nav-link {{request()->is('/') ? 'active text-danger' : '' }} underlineHover" href="/">Home </a>
                 </li>
                 <li class="nav-item mx-4">
-                    <a class="nav-link {{request()->is('menu') ? 'active' : '' }} underlineHover" href="/menu">Menu</a>
+                    <a class="nav-link {{request()->is('menu') ? 'active text-danger' : '' }} underlineHover" href="/menu">Menu</a>
                 </li>
                 <li class="nav-item mx-4" >
-                    <a class="nav-link {{request()->is('aboutus') ? 'active' : '' }} underlineHover" href="/aboutus">About Us</a>
+                    <a class="nav-link {{request()->is('aboutus') ? 'active text-danger' : '' }} underlineHover" href="/aboutus">About Us</a>
                 </li>
                 {{-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
