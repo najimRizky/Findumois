@@ -7,13 +7,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item mx-4" >
-                    <a class="nav-link {{request()->is('/') ? 'active' : '' }}" href="/">Home </a>
+                    <a class="nav-link {{request()->is('/') ? 'active' : '' }} underlineHover" href="/">Home </a>
                 </li>
                 <li class="nav-item mx-4">
-                    <a class="nav-link {{request()->is('menu') ? 'active' : '' }}" href="/menu">Menu</a>
+                    <a class="nav-link {{request()->is('menu') ? 'active' : '' }} underlineHover" href="/menu">Menu</a>
                 </li>
                 <li class="nav-item mx-4" >
-                    <a class="nav-link {{request()->is('login') ? 'active' : '' }}" href="/login">Log In</a>
+                    <a class="nav-link {{request()->is('aboutus') ? 'active' : '' }} underlineHover" href="/aboutus">About Us</a>
                 </li>
                 {{-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -30,6 +30,6 @@
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li> --}}
             </ul>
-            <button class="btn btn-danger my-2 my-sm-0 " type="button"><i class="fa fa-user"></i> Log In</button>
+            <a class="btn btn-danger my-2 my-sm-0 " href="/login" type="button"><i class="fa fa-user"></i> Log In</a>
         </div>
     </nav>

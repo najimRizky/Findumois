@@ -28,4 +28,4 @@ Route::get('/register', function () {
     return view('register');
 });
 
-Route::view('/about','v_about');
+Route::view('/aboutus','v_about');

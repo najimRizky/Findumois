@@ -1,0 +1,63 @@
+#tes{
+    color: red;
+}
+
+.card{
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.btn{
+    border-radius: 50px;
+}
+
+.underlineHover{
+    cursor: pointer;
+    color: #000000;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.underlineHover::after{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0px;
+
+    /* width: 0px;
+        background:black;
+    transition: width .3s; */
+    animation: backward 0.3s;
+}  
+
+.underlineHover:hover::after{
+    /* transition: width .3s; */
+    content: '';
+    animation: forward 0.3s;
+    /* width: 100%;
+        background:black; */
+    width: 100%;
+    background:black;
+}
+
+@keyframes forward {
+    from {
+        width: 0px;
+        background:white;
+    }
+    to {
+        width: 100%;
+        background:black;
+    }
+}
+
+@keyframes backward {
+    from {
+        width: 100%;
+        background-color:black;
+    }
+    to {
+        width: 0px;
+        background-color:white;
+    }
+}
