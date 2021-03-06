@@ -50,8 +50,6 @@ class AdminController extends Controller
             'Kategori' => Request()->Kategori,
         ];
 
-        
-
         $this->AdminModel->addMenu($data);
         return redirect('admin/editmenu')->with('message', 'Menu berhasil ditambah!');
     }

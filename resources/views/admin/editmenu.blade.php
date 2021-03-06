@@ -25,7 +25,7 @@
 			</thead>
 			<tbody class="text-center ">
 				@foreach ($menus as $item)
-                    <tr>
+                    <tr data-aos="fade-right">
                         <td class="align-center">{{$item->ID}}</td>
                         <td>{{$item->Nama}}</td>
                         <td>{{$item->Kategori}}</td>
