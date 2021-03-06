@@ -39,7 +39,6 @@ class AdminController extends Controller
             'Gambar' => 'required|mimes:jpg,jpeg,png|max:3072'
         ]);
 
-        
         $encode = file_get_contents(Request()->Gambar);
         $data = [
             'ID' => Request()->ID,
