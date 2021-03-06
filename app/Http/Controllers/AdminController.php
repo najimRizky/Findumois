@@ -18,11 +18,11 @@ class AdminController extends Controller
         return view('admin.v_admin');
     }
 
-    public function editMenu(){
+    public function viewMenu(){
         $data = [
             'menus' => $this->MenuModel->allMenu(), 
         ];
-        return view('admin.editMenu',$data);
+        return view('admin.viewMenu',$data);
     }
 
     public function addMenu(){
@@ -50,6 +50,47 @@ class AdminController extends Controller
         ];
 
         $this->AdminModel->addMenu($data);
-        return redirect('admin/editmenu')->with('message', 'Menu berhasil ditambah!');
+        return redirect('admin/viewmenu')->with('message', 'Menu berhasil ditambah!');
+    }
+
+    public function editMenu($ID) {
+        $data = [
+            'detail' => $this->MenuModel->detailMenu($ID), 
+        ];
+
+        return view('admin.editmenu', $data);
+    }
+
+    public function update() {
+        Request()->validate([
+            'ID' => 'required',
+            'Nama' => 'required|min:5|max:25',
+            'Harga' => 'required',
+            'Deskripsi' => 'required|min:10|max:255',
+            'Kategori' => 'required',
+            'Gambar' => 'mimes:jpg,jpeg,png|max:3072'
+        ]);
+
+        if(Request()->Gambar == NULL){
+            $data = [
+                'detail' => $this->MenuModel->detailMenu(Request()->ID), 
+            ];
+
+            $image = $data['detail']->Gambar;
+        } else {
+            $image = file_get_contents(Request()->Gambar);
+        }
+        
+        $data = [
+            'ID' => Request()->ID,
+            'Nama' => Request()->Nama,
+            'Harga' => Request()->Harga,
+            'Deskripsi' => Request()->Deskripsi,
+            'Gambar' => $image,
+            'Kategori' => Request()->Kategori,
+        ];
+
+        $this->AdminModel->editMenu($data);
+        return redirect('admin/viewmenu')->with('message', 'Menu berhasil diubah!');
     }
 }

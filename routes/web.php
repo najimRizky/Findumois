@@ -18,9 +18,12 @@ use App\Http\Controllers\AdminController;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/menu', [MenuController::class, 'index']);
 Route::get('/admin', [AdminController::class, 'index']);
-Route::get('/admin/editmenu', [AdminController::class, 'editMenu']);
+Route::get('/admin/viewmenu', [AdminController::class, 'viewMenu']);
 Route::get('/admin/addmenu', [AdminController::class, 'addMenu']);
 Route::post('/admin/insert', [AdminController::class, 'insert']);
+Route::get('/admin/editmenu/{id_menu}', [AdminController::class, 'editMenu']);
+Route::post('/admin/update', [AdminController::class, 'update']);
+
 
 
 Route::get('/menu/{id_menu}', [HomeController::class, 'menu']);
