@@ -11,6 +11,7 @@ class MenuController extends Controller
     {
         $this->MenuModel = new MenuModel();
     }
+
     public function index()
     {
         $data = [

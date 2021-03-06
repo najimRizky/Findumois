@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +17,10 @@ use App\Http\Controllers\MenuController;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/menu', [MenuController::class, 'index']);
+Route::get('/admin', [AdminController::class, 'index']);
+Route::get('/admin/editmenu', [AdminController::class, 'editMenu']);
+Route::get('/admin/addmenu', [AdminController::class, 'addMenu']);
+Route::post('/admin/insert', [AdminController::class, 'insert']);
 
 
 Route::get('/menu/{id_menu}', [HomeController::class, 'menu']);
@@ -30,6 +35,6 @@ Route::get('/register', function () {
 
 Route::view('/aboutus','v_about');
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
