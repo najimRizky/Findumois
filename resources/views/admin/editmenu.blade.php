@@ -29,7 +29,7 @@
                         <td class="align-center">{{$item->ID}}</td>
                         <td>{{$item->Nama}}</td>
                         <td>{{$item->Kategori}}</td>
-                        <td>Rp{{$item->Harga}}</td>
+                        <td>{{$item->Harga}}</td>
                         <td> <?= '<img src="data:image/jpeg;base64,'.base64_encode($item->Gambar).'" style="width: 100px; height: 100px; object-fit: cover;" alt="'.$item->Nama.'"/>'; ?></td>
                         <td>
                             <button class="btn btn-primary">Edit</button>
