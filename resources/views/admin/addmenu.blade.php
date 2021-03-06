@@ -9,9 +9,9 @@
 
                         <div class="form-group">
                             <label for="">ID</label><br>
-                            <input type="number" class="form-control @error('id') is-invalid @enderror" name="id" value="{{old('id')}}">
+                            <input type="number" class="form-control @error('ID') is-invalid @enderror" name="ID" value="{{old('ID')}}">
                             <div class="invalid-feedback">
-                                @error('id')
+                                @error('ID')
                                     <div class="alert alert-danger">{{$message}}</div>
                                 @enderror
                             </div>
@@ -19,9 +19,9 @@
 
                         <div class="form-group">
                             <label for="">Nama Menu</label><br>
-                            <input type="text" class="form-control @error('nama') is-invalid @enderror" name="nama" value="{{old('nama')}}">
+                            <input type="text" class="form-control @error('Nama') is-invalid @enderror" name="Nama" value="{{old('Nama')}}">
                             <div class="invalid-feedback ">
-                                @error('nama')
+                                @error('Nama')
                                     <div class="alert alert-danger">{{$message}}</div>
                                 @enderror
                             </div>
@@ -29,9 +29,9 @@
 
                         <div class="form-group">
                             <label for="">Harga</label><br>
-                            <input type="number" class="form-control @error('harga') is-invalid @enderror" name="harga" min="100" max="10000" value="{{old('harga')}}">
+                            <input type="number" class="form-control @error('Harga') is-invalid @enderror" name="Harga" min="100" max="10000" value="{{old('Harga')}}">
                             <div class="invalid-feedback">
-                                @error('harga')
+                                @error('Harga')
                                     <div class="alert alert-danger">{{$message}}</div>
                                 @enderror
                             </div>
@@ -39,7 +39,7 @@
 
                         <div class="form-group">
                             <label for="">Kategori</label><br>
-                            <select name="kategori" class="form-control @error('kategori') is-invalid @enderror" >
+                            <select name="Kategori" class="form-control @error('Kategori') is-invalid @enderror" >
                                 <option value="" disabled>Select This</option>
                                 <option value="Appetizer">Appetizer</option>
                                 <option value="Main Course">Main Course</option>
@@ -47,25 +47,25 @@
                                 <option value="Drink">Drink</option>
                             </select>
                             <div class="invalid-feedback">
-                                @error('kategori')
+                                @error('Kategori')
                                     <div class="alert alert-danger">{{$message}}</div>
                                 @enderror
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="">Deskripsi</label><br>
-                            <input type="text" class="form-control @error('desc') is-invalid @enderror" name="desc" >
+                            <input type="text" class="form-control @error('Deskripsi') is-invalid @enderror" name="Deskripsi" >
                             <div class="invalid-feedback">
-                                @error('desc')
+                                @error('Deskripsi')
                                     <div class="alert alert-danger">{{$message}}</div>
                                 @enderror
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="">Gambar</label><br>
-                            <input type="file" class="form-control @error('gambar') is-invalid @enderror" name="gambar" >
+                            <input type="file" class="form-control @error('Gambar') is-invalid @enderror" name="Gambar" >
                             <div class="invalid-feedback">
-                                @error('gambar')
+                                @error('Gambar')
                                     <div class="alert alert-danger">{{$message}}</div>
                                 @enderror
                             </div>

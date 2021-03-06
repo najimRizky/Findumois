@@ -11,4 +11,8 @@ class AdminModel extends Model
     public function showMenu(){
         return DB::table('menu')->get();
     }
+
+    public function addMenu($data){
+        DB::table('menu')->insert($data);
+    }
 }

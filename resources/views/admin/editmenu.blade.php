@@ -4,6 +4,14 @@
         <div class="col-12 ml-3 text-right">
             <a href="addmenu" type="button" class="btn-info btn mb-4 text-right">Add Menu</a>
         </div>
+        @if (session('message'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{session('message')}}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        @endif
         <table class='table table-bordered table-hover table-striped' id='myTable' cellspacing='0'>
 			<thead >
 				<tr class="text-center">
