@@ -15,4 +15,8 @@ class AdminModel extends Model
     public function editMenu($data){
         DB::table('menu')->where('ID', $data['ID'])->update($data);
     }
+
+    public function deleteMenu($data){
+        DB::table('menu')->where('ID', $data)->delete();
+    }
 }

@@ -33,11 +33,33 @@
                         <td> <?= '<img src="data:image/jpeg;base64,'.base64_encode($item->Gambar).'" style="width: 100px; height: 100px; object-fit: cover;" alt="'.$item->Nama.'"/>'; ?></td>
                         <td>
                             <a href="/admin/editmenu/{{$item->ID}}" type="button" class="btn btn-primary">Edit</a href="" type="button">
-                            <a class="btn btn-danger">Delete</a>
+                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal{{$item->ID}}">
+                            Delete
+                            </button>
                         </td>
                     </tr>
+                    <div class="modal fade" id="modal{{$item->ID}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                            <!-- <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Delete menu confi</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div> -->
+                            <div class="modal-body">
+                                Apakah kamu yakin menghapus menu <b>{{$item->Nama}}</b> ?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <a type="button" class="btn btn-primary" href="/admin/delete/{{$item->ID}}">Delete</a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
                 @endforeach
 			</tbody>
 		</table>
     </div>
+
 @endsection

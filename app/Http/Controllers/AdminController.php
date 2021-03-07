@@ -93,4 +93,9 @@ class AdminController extends Controller
         $this->AdminModel->editMenu($data);
         return redirect('admin/viewmenu')->with('message', 'Menu berhasil diubah!');
     }
+
+    public function deleteMenu($ID) {
+        $this->AdminModel->deleteMenu($ID);
+        return redirect('admin/viewmenu')->with('message', 'Menu berhasil dihapus!');
+    }
 }

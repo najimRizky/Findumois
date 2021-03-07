@@ -23,7 +23,7 @@ Route::get('/admin/addmenu', [AdminController::class, 'addMenu']);
 Route::post('/admin/insert', [AdminController::class, 'insert']);
 Route::get('/admin/editmenu/{id_menu}', [AdminController::class, 'editMenu']);
 Route::post('/admin/update', [AdminController::class, 'update']);
-
+Route::get('/admin/delete/{id_menu}', [AdminController::class, 'deleteMenu']);
 
 
 Route::get('/menu/{id_menu}', [HomeController::class, 'menu']);
