@@ -4,10 +4,6 @@
 
 @section('style')
 <style>
-    .card{
-        border-radius: 15px;
-        overflow: hidden;
-    }
     .nav-pills .nav-link{
         border-radius: 50px !important; 
         padding: 2px 5px;
@@ -33,7 +29,6 @@
         justify-content: center
     }
 </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 @endsection
 
 @section('content')
