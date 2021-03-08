@@ -7,23 +7,22 @@
     .nav-pills .nav-link{
         border-radius: 50px !important; 
         padding: 2px 5px;
-        
     }
     .nav-pills a{
-        border: 1px  solid red;
+        border: 2px  solid red;
         color: black;
         font-size: 13px;
         transition: 0.3s;
         margin: 1px;
+        background: rgb(243, 201, 13);
+
     }
     .nav-pills a:hover{
-        border: 1px red;
-        border: 1px  solid red;
-        background: rgb(255, 201, 120);
+        border: 2px  solid red;
     }
     .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
         color: white;
-        background-color: rgb(201, 0, 0);
+        background-color: red;
     }
     .nav-kategori{
         width: 320px;
