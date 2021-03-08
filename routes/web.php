@@ -15,8 +15,12 @@ use App\Http\Controllers\AdminController;
 |
 */
 
+//User
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/menu', [MenuController::class, 'index']);
+Route::get('/menu/{kategori}', [MenuController::class, 'showByKategori']);
+
+// Admin //
 Route::get('/admin', [AdminController::class, 'index']);
 Route::get('/admin/viewmenu', [AdminController::class, 'viewMenu']);
 Route::get('/admin/addmenu', [AdminController::class, 'addMenu']);

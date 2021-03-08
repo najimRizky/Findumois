@@ -14,4 +14,8 @@ class MenuModel extends Model{
     public function detailMenu($ID) {
         return DB::table('menu')->where('ID',$ID)->first();
     }
+
+    public function showByKategori($kategori){
+        return DB::table('menu')->where('Kategori',$kategori)->get();
+    }
 }

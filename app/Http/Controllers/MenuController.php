@@ -19,4 +19,11 @@ class MenuController extends Controller
         ];
         return view('menu', $data);
     }
+
+    public function showByKategori($kategori){
+        $data = [
+            'menus' => $this->MenuModel->showByKategori($kategori),
+        ];
+        return view('menu', $data);
+    }
 }
