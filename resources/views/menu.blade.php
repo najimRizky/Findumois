@@ -8,9 +8,9 @@
     <div class="container align-items-center justify-content-center">
         <h1 class="text-center" data-aos="fade-down">Menu</h1>
         <div class="row align-items-center justify-content-center">
-            {{-- @foreach ($menus as $item) 
+            @foreach ($menus as $item) 
                 @include('components.card',['item' => $item])
-            @endforeach --}}
+            @endforeach
         </div>
     </div>
     <script>

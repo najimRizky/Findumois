@@ -22,7 +22,7 @@ class AdminController extends Controller
         $data = [
             'menus' => $this->MenuModel->allMenu(), 
         ];
-        return view('admin.viewMenu',$data);
+        return view('admin.viewmenu',$data);
     }
 
     public function addMenu(){
