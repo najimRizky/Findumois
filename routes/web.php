@@ -5,6 +5,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PesanController;
+
+use App\Http\Controllers\CaptchaServiceController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,19 +37,23 @@ Route::get('/admin/delete/{id_menu}', [AdminController::class, 'deleteMenu']);
 
 Route::get('/menu/{id_menu}', [HomeController::class, 'menu']);
 
-Route::get('/login', function () {
-    return view('login');
-});
+// Route::get('/login', function () {
+//     return view('login');
+// });
 
-Route::get('/register', function () {
-    return view('register');
-});
+// Route::get('/register', function () {
+//     return view('register');
+// });
 
 Route::view('/aboutus','v_about');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/contact-form', [CaptchaServiceController::class, 'index']);
+Route::post('/captcha-validation', [CaptchaServiceController::class, 'capthcaFormValidate']);
+Route::get('/reload-captcha', [CaptchaServiceController::class, 'reloadCaptcha']);
 
 // Auth::routes();
 
