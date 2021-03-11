@@ -15,16 +15,12 @@
         crossorigin="anonymous" />
     <style>
         .bodyBackground {
-            background: url('register.jpg') no-repeat center center fixed;
+            background: url('{{asset('Gambar')}}/register.jpg') no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
         }
-
-        /*
-        *
-        */
 
         .border-md {
             border-width: 2px;
@@ -45,14 +41,9 @@
             border: none;
         }
 
-        .btn-twitter:hover,
-        .btn-twitter:focus {
+        .btn-twitter:hover, .btn-twitter:focus {
             background: #1799e4;
         }
-
-        /*
-        *
-        */
 
         body {
             min-height: 100vh;
@@ -100,8 +91,7 @@
                 <div class="container">
                     <!-- Navbar Brand -->
                     <a href="#" class="navbar-brand">
-                        <img src="https://res.cloudinary.com/mhmd/image/upload/v1571398888/Group_1514_tjekh3_zkts1c.svg"
-                            alt="logo" width="150">
+                        <img src="{{asset('Gambar')}}/Logo_Findumois.png" alt="logo" width="150">
                     </a>
                 </div>
             </nav>
