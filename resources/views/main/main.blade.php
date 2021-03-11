@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="{{ URL::asset('/css/app.css') }}">
 
 </head>
-<body >
+<body style="background-color: #E1D3D3">
     <header>
         @include('components.nav')
     </header>

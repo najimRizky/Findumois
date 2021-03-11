@@ -9,11 +9,16 @@ body {
     overflow: hidden;
 }
 
+.bg-light{
+    background-color: #E1D3D3 !important;
+}
+
 /* Navigation Animation*/
 .underlineHover{
     cursor: pointer;
     transition: 0.3s;
     border-radius: 5px;
+    color: rgb(19, 19, 19);
 }
 .underlineHover::after{
     content: '';
@@ -31,26 +36,26 @@ body {
     animation: forward 0.3s;
     /* width: 100%;
         background:black; */
-    width: 100%;
-    background:black;
+    width: 20%;
+    background:rgb(70, 70, 70);
 }
 @keyframes forward {
     from {
         width: 0px;
-        background:white;
+        background:rgb(70, 70, 70);
     }
     to {
-        width: 100%;
-        background:black;
+        width: 20%;
+        background:rgb(70, 70, 70);
     }
 }
 @keyframes backward {
     from {
-        width: 100%;
-        background-color:black;
+        width: 20%;
+        background-color:rgb(70, 70, 70);
     }
     to {
         width: 0px;
-        background-color:white;
+        background-color:rgb(70, 70, 70);
     }
 }

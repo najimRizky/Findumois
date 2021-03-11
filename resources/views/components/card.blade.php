@@ -9,7 +9,7 @@
             <p class="text-center" style="color: red; font-weight: bold;">Rp{{$item->Harga}}</p>
             <div class="row justify-content-around">
                 <button  class="btn btn-link" style="color: red; font-weight: bold; font-style: underline;" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="{{$item->Deskripsi}}">+ Detail</button>
-                <a href="#" class="btn btn-warning " style="font-weight: bold">Pesan <br></a>
+                <a href="/pesan/{{$item->ID}}" class="btn btn-warning " style="font-weight: bold">Pesan <br></a>
             </div>
         </div>
     </div> 
