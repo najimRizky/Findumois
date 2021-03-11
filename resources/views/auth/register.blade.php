@@ -15,11 +15,7 @@
         crossorigin="anonymous" />
     <style>
         .bodyBackground {
-            background: url('{{asset('Gambar')}}/register.jpg') no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
+            background: rgba(0,0,0,0.5)
         }
 
         .border-md {
@@ -47,6 +43,11 @@
 
         body {
             min-height: 100vh;
+            background: url('{{asset('Gambar')}}/register.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
         }
 
         .form-control:not(select) {
@@ -102,11 +103,11 @@
                 <!-- For Demo Purpose -->
                 <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
                     <img src="{{asset('Gambar')}}/Logo_Findumois.png" alt="" class="img-fluid mb-3 d-none d-md-block">
-                    <h1>Create an Account</h1>
                 </div>
 
                 <!-- Registeration Form -->
-                <div class="col-md-7 col-lg-6 ml-auto">
+                <div class="col-md-7 col-lg-6 ml-auto" style="background: rgba(255,255,255,0.7); border-radius: 25px">
+                    <h1 class="text-center mt-4 mb-4">Create an Account</h1>
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
                         <div class="row">
@@ -117,7 +118,7 @@
                                         <i class="fa fa-user text-muted"></i>
                                     </span>
                                 </div>
-                                <input id="firstName" type="text" name="firstname" placeholder="First Name"
+                                <input id="firstName" type="text" name="firstname" placeholder="First Name" style="background: rgba(255,255,255,0.3)"
                                     class="form-control bg-white border-left-0 border-md  @error('firstname') is-invalid @enderror" name="firstname" value="{{ old('firstname') }}" required autocomplete="firstname" >
                                 @error('firstname')
                                     <span class="invalid-feedback" role="alert">

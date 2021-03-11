@@ -13,11 +13,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
         crossorigin="anonymous" />
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     
     <script src="https://www.google.com/recaptcha/api.js" ></script>
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
 
     <style>
         html,
@@ -26,14 +41,7 @@
         }
 
         .bodyBackground {
-            background: url('{{asset('Gambar')}}/login_background.png') no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            height: 100%;
-            background-repeat: no-repeat;
-            background-position: center;
+            background: rgba(0,0,0,0.5);
         }
 
         /*
@@ -70,6 +78,13 @@
 
         body {
             min-height: 100vh;
+            background: url('{{asset('Gambar')}}/login_background.png') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         .form-control:not(select) {
@@ -126,11 +141,11 @@
                 <!-- For Demo Purpose -->
                 <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
                     <img src="{{asset('Gambar')}}/Logo_Findumois.png" alt="" class="img-fluid mb-3 d-none d-md-block">
-                    <h1>Login</h1>
                 </div>
 
                 <!-- Registeration Form -->
-                <div class="col-md-7 col-lg-6 ml-auto">
+                <div class="col-md-7 col-lg-6 ml-auto" style="background: rgba(255,255,255,0.7); border-radius: 25px">
+                    <h1 class="text-center mb-4 mt-4">Login</h1>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
                         <div class="row">
@@ -175,6 +190,15 @@
                                     </button>
                                 </div>
                             </div>
+                            @if ($errors->any('captcha'))
+                            <div class="text-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div><br />
+                            @endif
                 
                             <div class="input-group col-lg-12 mb-4">
                                 <input id="captcha" type="text" class="form-control" placeholder="Enter Captcha" name="captcha">
@@ -216,17 +240,7 @@
     
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    
     
     <script type="text/javascript">
         $('#reload').click(function () {
