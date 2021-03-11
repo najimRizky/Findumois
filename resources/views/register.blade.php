@@ -101,15 +101,15 @@
             <div class="row py-5 mt-4 align-items-center">
                 <!-- For Demo Purpose -->
                 <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
-                    <img src="Logo_Findumois.png" alt="" class="img-fluid mb-3 d-none d-md-block">
+                    <img src="{{asset('Gambar')}}/Logo_Findumois.png" alt="" class="img-fluid mb-3 d-none d-md-block">
                     <h1>Create an Account</h1>
                 </div>
 
                 <!-- Registeration Form -->
                 <div class="col-md-7 col-lg-6 ml-auto">
-                    <form action="#">
+                    <form method="POST" action="{{ route('register') }}">
+                        @csrf
                         <div class="row">
-
                             <!-- First Name -->
                             <div class="input-group col-lg-6 mb-4">
                                 <div class="input-group-prepend">
@@ -118,7 +118,12 @@
                                     </span>
                                 </div>
                                 <input id="firstName" type="text" name="firstname" placeholder="First Name"
-                                    class="form-control bg-white border-left-0 border-md">
+                                    class="form-control bg-white border-left-0 border-md  @error('firstname') is-invalid @enderror" name="firstname" value="{{ old('firstname') }}" required autocomplete="firstname" >
+                                @error('firstname')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
 
                             <!-- Last Name -->
@@ -129,7 +134,13 @@
                                     </span>
                                 </div>
                                 <input id="lastName" type="text" name="lastname" placeholder="Last Name"
-                                    class="form-control bg-white border-left-0 border-md">
+                                    class="form-control bg-white border-left-0 border-md @error('lastname') is-invalid @enderror" name="lastname" value="{{ old('lastname') }}" autocomplete="lastname">
+                                
+                                @error('lastname')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
 
                             <!-- Email Address -->
@@ -140,7 +151,12 @@
                                     </span>
                                 </div>
                                 <input id="email" type="email" name="email" placeholder="Email Address"
-                                    class="form-control bg-white border-left-0 border-md">
+                                    class="form-control bg-white border-left-0 border-md @error('email') is-invalid @enderror" value="{{ old('email') }}" required autocomplete="email">
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
 
                             <!-- Phone Number -->
@@ -150,8 +166,13 @@
                                         <i class="fa fa-phone-square text-muted"></i>
                                     </span>
                                 </div>
-                                <input id="phoneNumber" type="tel" name="phone" placeholder="Phone Number"
-                                    class="form-control bg-white border-md border-left-0 pl-3">
+                                <input id="telepon" type="text" name="telepon" placeholder="Phone Number"
+                                    class="form-control bg-white border-md border-left-0 pl-3 @error('telepon') is-invalid @enderror" value="{{ old('telepon') }}" required autocomplete="telepon">
+                                @error('telepon')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
 
                             <!-- Birth Date -->
@@ -161,8 +182,13 @@
                                         <i class="fa fa-calendar" aria-hidden="true"></i>
                                     </span>
                                 </div>
-                                <input id="birthDate" type="date" name="birtDate" placeholder="birthDate"
-                                    class="form-control bg-white border-left-0 border-md">
+                                <input id="tgllahir" type="date" name="tgllahir" placeholder="Date of Birth"
+                                    class="form-control bg-white border-left-0 border-md @error('tgllahir') is-invalid @enderror" value="{{ old('tgllahir') }}" required autocomplete="tgllahir">
+                                @error('tgllahir')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
 
                             <!-- Gender -->
@@ -173,11 +199,16 @@
                                     </span>
                                 </div>
                                 <select id="gender" name="gender"
-                                    class="form-control custom-select bg-white border-left-0 border-md">
+                                    class="form-control custom-select bg-white border-left-0 border-md @error('gender') is-invalid @enderror" name="gender" value="{{ old('gender') }}" required autocomplete="gender">
                                     <option value="" disabled selected>Gender</option>
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
                                 </select>
+                                @error('gender')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
 
                             <!-- Password -->
@@ -188,7 +219,12 @@
                                     </span>
                                 </div>
                                 <input id="password" type="password" name="password" placeholder="Password"
-                                    class="form-control bg-white border-left-0 border-md">
+                                    class="form-control bg-white border-left-0 border-md @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
 
                             <!-- Password Confirmation -->
@@ -198,16 +234,16 @@
                                         <i class="fa fa-lock text-muted"></i>
                                     </span>
                                 </div>
-                                <input id="passwordConfirmation" type="text" name="passwordConfirmation"
+                                <input id="password-confirm" type="password" name="password_confirmation"
                                     placeholder="Confirm Password"
-                                    class="form-control bg-white border-left-0 border-md">
+                                    class="form-control bg-white border-left-0 border-md" required autocomplete="new-password">
                             </div>
 
                             <!-- Submit Button -->
                             <div class="form-group col-lg-12 mx-auto mb-0">
-                                <a href="#" class="btn btn-primary btn-block py-2">
-                                    <span class="font-weight-bold">Create your account</span>
-                                </a>
+                                <button type="submit" class="btn btn-primary btn-block py-2">
+                                    Create your account
+                                </button>
                             </div>
 
                             <!-- Divider Text -->
