@@ -13,6 +13,10 @@ body {
     background-color: #E1D3D3 !important;
 }
 
+.navbar-light .navbar-toggler{
+    border-color: rgba(0,0,0,0);
+}
+
 /* Navigation Animation*/
 .underlineHover{
     cursor: pointer;

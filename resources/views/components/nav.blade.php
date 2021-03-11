@@ -48,7 +48,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
             <ul class="nav justify-content-center">
-                    <img class="nav-link active" href="#" style="width: 200px" src="{{asset('Gambar')}}/Logo_Findumois.png">
+                    <img class="nav-link active" href="#" style="width: 200px" src="{{asset('Gambar')}}/Logo_Findumois1.png">
             </ul>
             <ul class="nav justify-content-right">
                 <li class="nav-item">
