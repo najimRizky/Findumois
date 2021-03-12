@@ -44,10 +44,6 @@
             background: rgba(0,0,0,0.5);
         }
 
-        /*
-        *
-        */
-
         .border-md {
             border-width: 2px;
         }
@@ -71,10 +67,6 @@
         .btn-twitter:focus {
             background: #1799e4;
         }
-
-        /*
-        *
-        */
 
         body {
             min-height: 100vh;
