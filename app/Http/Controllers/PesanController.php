@@ -47,18 +47,17 @@ class PesanController extends Controller
             'data' => $this->PesanModel->getCart($email), 
         ];
         $data2['data'] = array();    
+        $tmp = array();
         foreach($data['data'] as $item){
-            // $arr = [
-                // 'jumlah' => $item->jumlah,
-            // ];
-            array_push($data2['data'],$this->MenuModel->detailMenu($item->id_menu));
+            $tmp = $this->MenuModel->detailMenu($item->id_menu);
+            $tmp->Jumlah = $item->jumlah;
+            array_push($data2['data'],$tmp);
         }
         return view('keranjang', $data2);
     }
 
     public function setKeranjang($id, $jumlah){
         $email = Auth::user()->email;
-
         $data = [
             'id_menu' => $id,
             'jumlah' => $jumlah,
