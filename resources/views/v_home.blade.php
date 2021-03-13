@@ -53,7 +53,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Mie Goreng</h5>
                                 <p class="card-text">dari mie yang dibeli dari minimarket terdekat.</p>
-                                <a href="#" class="btn btn-primary">Go Menu</a>
+                                <a href="/menu" class="btn btn-primary">Go Menu</a>
                             </div>
                         </div>
                         <div class="card" style="width: 18rem; margin-right: 30px">
@@ -61,7 +61,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Nasi Goreng</h5>
                                 <p class="card-text">nasi yang digoreng dengan minyak yang sedikit agar rendah kalori dan sehat untuk lambung sobat misqueen.</p>
-                                <a href="#" class="btn btn-primary">Go Menu</a>
+                                <a href="/menu" class="btn btn-primary">Go Menu</a>
                             </div>
                         </div>
                         <div class="card" style="width: 18rem;">
@@ -69,7 +69,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Kripik Kentang</h5>
                                 <p class="card-text">kentang yang ditanam sendiri dan digoreng dengan suhu yang stabil hingga garing.</p>
-                                <a href="#" class="btn btn-primary">Go Menu</a>
+                                <a href="/menu" class="btn btn-primary">Go Menu</a>
                             </div>
                         </div>
                     </div>

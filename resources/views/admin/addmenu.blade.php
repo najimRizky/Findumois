@@ -1,6 +1,6 @@
 @extends('main.admin')
 @section('content')
-    <div class="container">
+    <div class="container mt-5">
         <form action="/admin/insert" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="content">
@@ -71,6 +71,7 @@
                             </div>
                         </div>
                         <button class="btn btn-primary">Submit</button>
+                        <a href="/admin" class="btn btn-secondary">Cancel</a>
                     </div>
                 </div>
             </div>

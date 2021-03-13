@@ -2,7 +2,7 @@
 @section('content')
     <div class="container mt-5">
         <div class="col-12 ml-3 text-right">
-            <a href="addmenu" type="button" class="btn-info btn mb-4 text-right">Add Menu</a>
+            <a href="/admin/addmenu" type="button" class="btn-info btn mb-4 text-right">Add Menu</a>
         </div>
         @if (session('message'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
