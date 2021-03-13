@@ -24,6 +24,8 @@ Route::get('/menu', [MenuController::class, 'index']);
 Route::get('/menu/{kategori}', [MenuController::class, 'showByKategori']);
 Route::get('/pesan/{id}',[PesanController::class, 'index']);
 
+Route::post('/pesan/langsung', [PesanController::class, 'submitOrder']);
+
 // Admin //
 Route::get('/admin', [AdminController::class, 'index']);
 Route::get('/admin/viewmenu', [AdminController::class, 'viewMenu']);

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\MenuModel;
+use App\Models\PesanModel;
 
 class PesanController extends Controller
 {
@@ -11,6 +12,7 @@ class PesanController extends Controller
     {
         $this->middleware('auth');
         $this->MenuModel = new MenuModel();
+        $this->PesanModel = new PesanModel();
     }
 
     /**
@@ -24,5 +26,16 @@ class PesanController extends Controller
             'id' => $id,
         ];
         return view('pesan',$data);
+    }
+
+    public function submitOrder(){
+        $data = [
+            'id_menu' => Request()->id_menu,
+            'jumlah' => Request()->jumlah,
+            'email' => Request()->email,
+        ];
+
+        $this->PesanModel->addOrder($data);
+        return redirect('/menu')->with('message', 'Pesanan berhasil ditambah');
     }
 }

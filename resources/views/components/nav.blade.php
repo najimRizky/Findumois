@@ -41,7 +41,7 @@
                 <a class="nav-link {{request()->is('menu') ? 'active text-danger' : '' }} underlineHover" href="/menu">Menu</a>
                 <a class="nav-link {{request()->is('aboutus') ? 'active text-danger' : '' }} underlineHover" href="/aboutus">About Us</a>
             
-          </div>
+        </div>
         </div>
         <nav class="navbar navbar-light bg-transparent">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,14 +57,24 @@
 
                         {{-- <a class="nav-link active" style="text-decoration: none" type="link" href="/login">Login</a> --}}
                     @else
-                    <a class="nav-link" style="color: black" href="{{ route('logout') }}"
-                    onclick="event.preventDefault();
+                    <ul>
+                        <li style="display: inline-block;">
+                            <button type="button" class="btn btn-primary">
+                                <i class="fa fa-shopping-cart mr-2"></i><span class="badge badge-light"> 9</span>
+                                {{-- <span class="sr-only">unread messages</span> --}}
+                            </button>
+                        </li>
+                        <li style="display: inline-block;"`>
+                            <a class="nav-link" style="color: black" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}
-                </a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                    @csrf
-                </form>
+                                {{ __('Logout') }}
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </li>
+                    </ul>
                     @endguest
                 </li>
             </ul>
