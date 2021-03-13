@@ -45,7 +45,11 @@
                 <a class="nav-link {{request()->is('/') ? 'active text-danger' : '' }} underlineHover" href="/">Home </a>
                 <a class="nav-link {{request()->is('menu') ? 'active text-danger' : '' }} underlineHover" href="/menu">Menu</a>
                 <a class="nav-link {{request()->is('aboutus') ? 'active text-danger' : '' }} underlineHover" href="/aboutus">About Us</a>
-            
+                @guest
+                    <span></span>
+                @else
+                    <a class="nav-link {{request()->is('order') ? 'active text-danger' : '' }} underlineHover" href="/order">Order</a>
+                @endguest
         </div>
         </div>
         <nav class="navbar navbar-light bg-transparent">

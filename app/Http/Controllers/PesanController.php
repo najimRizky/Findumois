@@ -98,4 +98,8 @@ class PesanController extends Controller
     public function deleteDariKeranjang(){
         //coming soon
     }
+
+    public function history(){
+        return view('order');
+    }
 }

@@ -32,6 +32,7 @@ Route::group(['middleware' => 'user'], function(){
     Route::get('/keranjang', [PesanController::class, 'showKeranjang']);
     Route::get('/keranjang/{id_menu}/{jumlah}', [PesanController::class, 'setKeranjang']);
     Route::get('/checkout', [PesanController::class, 'pesanDariKeranjang']);
+    Route::get('/order', [PesanController::class, 'history']);
 });
 
 
