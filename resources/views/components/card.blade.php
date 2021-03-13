@@ -20,6 +20,9 @@
         </div>
     </div> 
 </div>
+@guest
+<div></div>    
+@else
 <div class="modal fade" id="modal{{$item->ID}}" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -54,3 +57,4 @@
         </div>
     </div>
 </div>
+@endguest
