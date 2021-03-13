@@ -25,16 +25,17 @@ Route::get('/menu/{kategori}', [MenuController::class, 'showByKategori']);
 // Route::get('/pesan/{id}',[PesanController::class, 'index']);
 
 
-
-
 // Admin //
 
 Route::group(['middleware' => 'user'], function(){
     Route::post('/pesan/langsung', [PesanController::class, 'submitOrder']);
+    Route::get('/keranjang', [PesanController::class, 'showKeranjang']);
+    Route::get('/keranjang/{id_menu}/{jumlah}', [PesanController::class, 'setKeranjang']);
+    Route::get('/checkout', [PesanController::class, 'pesanDariKeranjang']);
 });
 
 
-Route::get('/menu/{id_menu}', [HomeController::class, 'menu']);
+// Route::get('/menu/{id_menu}', [HomeController::class, 'menu']);
 
 Route::view('/aboutus','v_about');
 
@@ -51,8 +52,8 @@ Route::get('/reload-captcha', [CaptchaServiceController::class, 'reloadCaptcha']
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::group(['middleware' => 'admin'], function(){
-    Route::get('/admin', [AdminController::class, 'index']);
-    Route::get('/admin/viewmenu', [AdminController::class, 'viewMenu']);
+    Route::get('/admin', [AdminController::class, 'viewMenu']);
+    // Route::get('/admin/viewmenu', [AdminController::class, 'viewMenu']);
     Route::get('/admin/addmenu', [AdminController::class, 'addMenu']);
     Route::post('/admin/insert', [AdminController::class, 'insert']);
     Route::get('/admin/editmenu/{id_menu}', [AdminController::class, 'editMenu']);

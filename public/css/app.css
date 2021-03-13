@@ -1,31 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Lobster&family=Source+Sans+Pro:wght@200&display=swap");
+
 body {
-    font-family: 'Roboto';
+    font-family: "Courgette", cursive;
 }
-.btn{
+.btn {
     border-radius: 50px;
 }
-.card{
+.card {
     border-radius: 15px;
     overflow: hidden;
 }
 
-.bg-light{
-    background-color: #E1D3D3 !important;
+.bg-light {
+    background-color: #e1d3d3 !important;
 }
 
-.navbar-light .navbar-toggler{
-    border-color: rgba(0,0,0,0);
+.navbar-light .navbar-toggler {
+    border-color: rgba(0, 0, 0, 0);
 }
 
 /* Navigation Animation*/
-.underlineHover{
+.underlineHover {
     cursor: pointer;
     transition: 0.3s;
     border-radius: 5px;
     color: rgb(19, 19, 19);
 }
-.underlineHover::after{
-    content: '';
+.underlineHover::after {
+    content: "";
     display: block;
     height: 2px;
 
@@ -33,33 +35,33 @@ body {
         background:black;
     transition: width .3s; */
     animation: backward 0.3s;
-}  
-.underlineHover:hover::after{
+}
+.underlineHover:hover::after {
     /* transition: width .3s; */
-    content: '';
+    content: "";
     animation: forward 0.3s;
     /* width: 100%;
         background:black; */
     width: 20%;
-    background:rgb(70, 70, 70);
+    background: rgb(70, 70, 70);
 }
 @keyframes forward {
     from {
         width: 0px;
-        background:rgb(70, 70, 70);
+        background: rgb(70, 70, 70);
     }
     to {
         width: 20%;
-        background:rgb(70, 70, 70);
+        background: rgb(70, 70, 70);
     }
 }
 @keyframes backward {
     from {
         width: 20%;
-        background-color:rgb(70, 70, 70);
+        background-color: rgb(70, 70, 70);
     }
     to {
         width: 0px;
-        background-color:rgb(70, 70, 70);
+        background-color: rgb(70, 70, 70);
     }
 }

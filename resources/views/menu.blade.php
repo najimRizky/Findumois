@@ -69,7 +69,7 @@
         </div>
     @endif
     <div class="container align-items-center justify-content-center">
-        <div style="text-align: center; background-color: #EE99A0; padding: 70px; margin: 20px">
+        <div class="rounded" style="text-align: center; background-color: #EE99A0; padding: 70px; margin: 20px">
             <h1 style="color: #D3E0EA">OUR MENU</h1>
         </div>
         <nav class="nav nav-pills nav-kategori  nav-justified mb-5">
@@ -95,6 +95,8 @@
             total = harga*jml;
             if(jml>=0 && jml<=50){
                 document.getElementById('total'+id).innerHTML = "Rp"+total.toLocaleString('en-US', {maximumFractionDigits:2});
+                var a = document.getElementById('cart'+id);
+                a.href = "keranjang/"+id+"/"+jml;
             }else if(jml>50){
                 document.getElementById('total'+id).innerHTML = "Maksimal 50";
             }
