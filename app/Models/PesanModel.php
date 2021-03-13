@@ -33,4 +33,8 @@ class PesanModel extends Model
     public function getLastKodeBeli(){
         return DB::table('orders')->latest('kode_pembelian')->first('kode_pembelian');
     }
+
+    public function getOrders($email){
+        return DB::table('orders')->where('email',$email)->get();
+    }
 }

@@ -100,6 +100,19 @@ class PesanController extends Controller
     }
 
     public function history(){
-        return view('order');
+        $email = Auth::user()->email;
+
+        $data = [
+            'data' => $this->PesanModel->getOrders($email), 
+        ];
+        $data2['data'] = array();    
+        $tmp = array();
+        foreach($data['data'] as $item){
+            $tmp = $this->MenuModel->detailMenu($item->id_menu);
+            $tmp->Jumlah = $item->jumlah;
+            $tmp->Tanggal = $item->tanggal;
+            array_push($data2['data'],$tmp);
+        }
+        return view('order', $data2);
     }
 }
