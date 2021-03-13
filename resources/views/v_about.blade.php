@@ -162,7 +162,7 @@
 
             <div class="col-lg-6 mt-4">
               <div class="member" data-aos="zoom-in" data-aos-delay="400">
-                <div class="pic"><img src="{{asset('Gambar')}}/coba.jpg" class="img-fluid" alt=""></div>
+                <div class="pic"><img src="{{asset('Gambar')}}/farhan.png" class="img-fluid" alt=""></div>
                 <div class="member-info">
                   <h4>Mohamad Farhan</h4>
                   <span>Programmer 4</span>
