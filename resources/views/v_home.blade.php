@@ -78,7 +78,7 @@
         </div>
         <div class="jumbotron" style="background-color: #E1D3D3">
             <div class="container" style="text-align: center">
-                <img src="{{asset('Gambar')}}/dompet.png" style="height: 100px; weight: 100px; text-align: center">
+                <img src="{{asset('Gambar')}}/dompet.png" style="height: 100px; width: 100px; text-align: center">
                 <h1 class="lead">Kami Pastikan</h1>
                 <h2 class="lead" style="color: red">Perut anda akan tetap kenyang walaupun akhir bulan</h2>
                 <p class="lead" style="font-size: 15px">Jika anda merasa uang anda kurang atau merasa makanan <br> kami masih terasa mahal, berarti anda tidak tahu diri. ehe <br> bercanda tau diri</p>
