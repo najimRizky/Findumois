@@ -82,6 +82,7 @@
                             </div>
                         </div>
                         <button class="btn btn-primary">Submit</button>
+                        <a href="/admin" class="btn btn-secondary">Cancel</a>
                     </div>
                 </div>
             </div>
