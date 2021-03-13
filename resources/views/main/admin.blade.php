@@ -57,9 +57,14 @@
                             <a class="nav-link" href="admin/profile" >Profile</a>
                         </li>
                     </ul>
-                        <form class="form-inline my-2 my-lg-0">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log Out</button>
-                        </form>
+                    <a class="nav-link" style="color: black" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
                 </div>
             </nav>
     </header>
