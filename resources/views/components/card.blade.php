@@ -6,13 +6,13 @@
         <div class="card-body">
             <h5 class="card-title text-center">{{$item->Nama}}</h5>
             <h6 class="card-subtitle mb-2 text-muted">{{$item->Kategori}}</h6>
-            <p class="text-center" style="color: red; font-weight: bold;">Rp{{$item->Harga}}</p>
+            <p class="text-center" style="color: black; font-weight: bold;">Rp{{$item->Harga}}</p>
             <div class="row justify-content-around">
                 <button  class="btn btn-link" style="color: red; font-weight: bold; font-style: underline;" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="{{$item->Deskripsi}}">+ Detail</button>
                 @guest
                 <a href="/login" class="btn btn-warning " style="font-weight: bold">Pesan <br></a>
                 @else
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal{{$item->ID}}">
+                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal{{$item->ID}}">
                     Pesan
                 </button>
                 @endguest

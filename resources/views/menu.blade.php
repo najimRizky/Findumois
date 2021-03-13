@@ -56,6 +56,8 @@
     opacity: 1;
     right: 0;
     }
+
+
 </style>
 @endsection
 
@@ -73,10 +75,20 @@
             <h1 style="color: #D3E0EA">OUR MENU</h1>
         </div>
         <nav class="nav nav-pills nav-kategori  nav-justified mb-5">
-            <a class="button" data-aos-delay="200" data-aos="fade-down" class="flex-sm-fill text-sm-center nav-link {{request()->is('menu/appetizer') ? 'active ' : '' }}" href="/menu/appetizer" ><span>Appetizer</span></a>
-            <a class="button" data-aos-delay="400" data-aos="fade-down" class="flex-sm-fill text-sm-center nav-link {{request()->is('menu/main course') ? 'active ' : '' }}" href="/menu/main course"><span>Main Course</span></a>
-            <a class="button" data-aos-delay="600" data-aos="fade-down" class="flex-sm-fill text-sm-center nav-link {{request()->is('menu/dessert') ? 'active ' : '' }}" href="/menu/dessert"><span>Dessert</span></a>
-            <a class="button" data-aos-delay="800" data-aos="fade-down" class="flex-sm-fill text-sm-center nav-link {{request()->is('menu/drink') ? 'active ' : '' }}" href="/menu/drink" type="button"></i><span>Drink</span></a>
+            <ul>
+                <li>
+                    <a class="button" data-aos-delay="200" data-aos="fade-down" class="flex-sm-fill text-sm-center nav-link {{request()->is('menu/appetizer') ? 'active ' : '' }}" href="/menu/appetizer" ><span>Appetizer</span></a>
+                </li>
+                <li>
+                    <a class="button" data-aos-delay="400" data-aos="fade-down" class="flex-sm-fill text-sm-center nav-link {{request()->is('menu/main course') ? 'active ' : '' }}" href="/menu/main course"><span>Main Course</span></a>
+                </li>
+                <li>
+                    <a class="button" data-aos-delay="600" data-aos="fade-down" class="flex-sm-fill text-sm-center nav-link {{request()->is('menu/dessert') ? 'active ' : '' }}" href="/menu/dessert"><span>Dessert</span></a>
+                </li>
+                <li>
+                    <a class="button" data-aos-delay="800" data-aos="fade-down" class="flex-sm-fill text-sm-center nav-link {{request()->is('menu/drink') ? 'active ' : '' }}" href="/menu/drink" type="button"></i><span>Drink</span></a>
+                </li>
+            </ul>
         </nav>
         <div class="row align-items-center justify-content-center">
             @foreach ($menus as $item) 

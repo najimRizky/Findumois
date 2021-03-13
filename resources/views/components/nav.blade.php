@@ -33,6 +33,11 @@
             <a class="btn btn-danger my-2 my-sm-0 " href="/login" type="button"><i class="fa fa-user"></i> Log In</a>
         </div>
     </nav> --}}
+<style>
+    @media only screen and (max-width: 600px){
+        .logo {display: none}
+    }
+</style>
 
     <div class="pos-f-t">
         <div class="collapse" id="navbarToggleExternalContent">
@@ -47,7 +52,7 @@
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-            <ul class="nav justify-content-center">
+            <ul class="nav justify-content-center logo">
                     <img class="nav-link active" href="#" style="width: 200px" src="{{asset('Gambar')}}/Logo_Findumois1.png">
             </ul>
             <ul class="nav justify-content-right">
