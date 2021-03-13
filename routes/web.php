@@ -24,7 +24,7 @@ Route::get('/menu', [MenuController::class, 'index']);
 Route::get('/menu/{kategori}', [MenuController::class, 'showByKategori']);
 // Route::get('/pesan/{id}',[PesanController::class, 'index']);
 
-
+Route::get('/keranjang', [PesanController::class, 'keranjang']);
 
 
 // Admin //

@@ -38,4 +38,8 @@ class PesanController extends Controller
         $this->PesanModel->addOrder($data);
         return redirect('/menu')->with('message', 'Pesanan berhasil ditambah');
     }
+
+    public function keranjang(){
+        return view('keranjang');
+    }
 }
