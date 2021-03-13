@@ -22,7 +22,7 @@ use App\Http\Controllers\CaptchaServiceController;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/menu', [MenuController::class, 'index']);
 Route::get('/menu/{kategori}', [MenuController::class, 'showByKategori']);
-Route::get('/pesan/{id}',[PesanController::class, 'index']);
+// Route::get('/pesan/{id}',[PesanController::class, 'index']);
 
 
 

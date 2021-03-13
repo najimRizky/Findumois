@@ -33,7 +33,7 @@ class PesanController extends Controller
             'id_menu' => Request()->id_menu,
             'jumlah' => Request()->jumlah,
             'email' => Request()->email,
-        ];
+        ];  
 
         $this->PesanModel->addOrder($data);
         return redirect('/menu')->with('message', 'Pesanan berhasil ditambah');
