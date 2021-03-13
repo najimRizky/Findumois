@@ -30,6 +30,8 @@ class PesanController extends Controller
     }
 
     public function submitOrder(){
+        $lastKodeBeli = $this->PesanModel->getLastKodeBeli();
+        $lastKodeBeli = $lastKodeBeli->kode_pembelian + 1;
         $data = [
             'id_menu' => Request()->id_menu,
             'jumlah' => Request()->jumlah,
@@ -59,8 +61,7 @@ class PesanController extends Controller
 
     public function setKeranjang($id, $jumlah){
         $email = Auth::user()->email;
-        $lastKodeBeli = $this->PesanModel->getLastKodeBeli();
-        $lastKodeBeli = $lastKodeBeli->kode_pembelian + 1;
+        
         $data = [
             'id_menu' => $id,
             'jumlah' => $jumlah,
