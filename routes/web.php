@@ -24,18 +24,18 @@ Route::get('/menu', [MenuController::class, 'index']);
 Route::get('/menu/{kategori}', [MenuController::class, 'showByKategori']);
 // Route::get('/pesan/{id}',[PesanController::class, 'index']);
 
-Route::get('/keranjang', [PesanController::class, 'showKeranjang']);
-Route::get('/keranjang/{id_menu}/{jumlah}', [PesanController::class, 'setKeranjang']);
-
 
 // Admin //
 
 Route::group(['middleware' => 'user'], function(){
     Route::post('/pesan/langsung', [PesanController::class, 'submitOrder']);
+    Route::get('/keranjang', [PesanController::class, 'showKeranjang']);
+    Route::get('/keranjang/{id_menu}/{jumlah}', [PesanController::class, 'setKeranjang']);
+    Route::get('/checkout', [PesanController::class, 'pesanDariKeranjang']);
 });
 
 
-Route::get('/menu/{id_menu}', [HomeController::class, 'menu']);
+// Route::get('/menu/{id_menu}', [HomeController::class, 'menu']);
 
 Route::view('/aboutus','v_about');
 

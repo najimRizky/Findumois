@@ -68,10 +68,30 @@ class PesanController extends Controller
     }
 
     public function pesanDariKeranjang(){
+        $email = Auth::user()->email;
+        $data = array();
 
+        $data = [
+            'data' => $this->PesanModel->getCart($email),
+        ];
+        
+        $lastKodeBeli = $this->PesanModel->getLastKodeBeli();
+        $lastKodeBeli = $lastKodeBeli->kode_pembelian + 1;
+
+        foreach($data['data'] as $item){
+            $tmp = [
+                'id_menu' => $item->id_menu,
+                'jumlah' => $item->jumlah,
+                'email' => $item->email,
+                'kode_pembelian' => $lastKodeBeli,
+            ];
+            $this->PesanModel->addOrder($tmp);
+        }
+        $this->PesanModel->deleteCart($email);
+        return redirect('/keranjang')->with('message', 'Checkout pesanan berhasil');
     }
 
     public function deleteDariKeranjang(){
-        
+        //coming soon
     }
 }

@@ -26,8 +26,11 @@ class PesanModel extends Model
         return DB::table('cart')->where('email',$email)->get();
     }
 
-    public function checkCart($id, $email){
-        // dd($result);
-        
+    public function deleteCart($email){
+        DB::table('cart')->where('email', $email)->delete();
+    }
+
+    public function getLastKodeBeli(){
+        return DB::table('orders')->latest('kode_pembelian')->first('kode_pembelian');
     }
 }
