@@ -95,6 +95,11 @@
             total = harga*jml;
             if(jml>=0 && jml<=50){
                 document.getElementById('total'+id).innerHTML = "Rp"+total.toLocaleString('en-US', {maximumFractionDigits:2});
+            }else if(jml>50){
+                document.getElementById('total'+id).innerHTML = "Maksimal 50";
+            }
+            else{
+                document.getElementById('total'+id).innerHTML = "Minimal jumlah 1";
             }
         }
     </script>
