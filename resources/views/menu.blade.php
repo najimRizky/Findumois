@@ -89,5 +89,13 @@
             $('[data-toggle="popover"]').popover();   
             $('[data-toggle="popover"]').on('click', function(e) {e.preventDefault(); return true;});
         });
+
+        function showTotal(harga,id){
+            jml = document.getElementById("jumlah"+id).value;
+            total = harga*jml;
+            if(jml>=0 && jml<=50){
+                document.getElementById('total'+id).innerHTML = "Rp"+total.toLocaleString('en-US', {maximumFractionDigits:2});
+            }
+        }
     </script>
 @endsection
