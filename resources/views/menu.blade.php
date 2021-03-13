@@ -95,6 +95,8 @@
             total = harga*jml;
             if(jml>=0 && jml<=50){
                 document.getElementById('total'+id).innerHTML = "Rp"+total.toLocaleString('en-US', {maximumFractionDigits:2});
+                var a = document.getElementById('cart'+id);
+                a.href = "keranjang/"+id+"/"+jml;
             }else if(jml>50){
                 document.getElementById('total'+id).innerHTML = "Maksimal 50";
             }

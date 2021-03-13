@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\MenuModel;
 use App\Models\PesanModel;
+use Illuminate\Support\Facades\Auth;
 
 class PesanController extends Controller
 {
@@ -39,7 +40,39 @@ class PesanController extends Controller
         return redirect('/menu')->with('message', 'Pesanan berhasil ditambah');
     }
 
-    public function keranjang(){
-        return view('keranjang');
+    public function showKeranjang(){
+        $email = Auth::user()->email;
+
+        $data = [
+            'data' => $this->PesanModel->getCart($email), 
+        ];
+        $data2['data'] = array();    
+        foreach($data['data'] as $item){
+            // $arr = [
+                // 'jumlah' => $item->jumlah,
+            // ];
+            array_push($data2['data'],$this->MenuModel->detailMenu($item->id_menu));
+        }
+        return view('keranjang', $data2);
+    }
+
+    public function setKeranjang($id, $jumlah){
+        $email = Auth::user()->email;
+
+        $data = [
+            'id_menu' => $id,
+            'jumlah' => $jumlah,
+            'email' => Auth::user()->email,
+        ];  
+        $this->PesanModel->addCart($data, $id, $email);
+        return redirect('/menu')->with('message', 'Pesanan berhasil dimasukkan ke keranjang');
+    }
+
+    public function pesanDariKeranjang(){
+
+    }
+
+    public function deleteDariKeranjang(){
+        
     }
 }

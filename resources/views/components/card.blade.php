@@ -44,7 +44,8 @@
                         <input type="number" oninput="showTotal({{$item->Harga}},{{$item->ID}})" class="form-control" required id="jumlah{{$item->ID}}" name="jumlah" placeholder="Minimal 1" min="1" max="50">
                     </div>
                     <p>Total: <span id="total{{$item->ID}}"></span></p>
-                    <button type="submit" class="btn btn-primary">Pesan</button>
+                    <button type="submit" class="btn btn-primary">Pesan langsung</button>
+                    <a href="" id="cart{{$item->ID}}" class="btn btn-info" type="button">Add to cart</a>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                 </form>
             </div>

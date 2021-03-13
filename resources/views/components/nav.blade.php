@@ -59,10 +59,10 @@
                     @else
                     <ul>
                         <li style="display: inline-block;">
-                            <button type="button" class="btn btn-primary">
-                                <i class="fa fa-shopping-cart mr-2"></i><span class="badge badge-light"> 9</span>
+                            <a href="/keranjang" type="button" class="btn btn-primary">
+                                <i class="fa fa-shopping-cart"></i><span class="badge badge-light"></span>
                                 {{-- <span class="sr-only">unread messages</span> --}}
-                            </button>
+                            </a>
                         </li>
                         <li style="display: inline-block;"`>
                             <a class="nav-link" style="color: black" href="{{ route('logout') }}"
