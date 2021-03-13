@@ -49,27 +49,27 @@
                     <h2 class="display-4" style="font-size: 20px; color: #C98787">asdasd</h2>
                     <div style="display: flex" class="d-flex justify-content-center">
                         <div class="card" style="width: 18rem; margin-right: 30px">
-                            <img class="card-img-top" src="{{asset('Gambar')}}/Ayam Bakar.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="{{asset('Gambar')}}/miegoreng.jpg" alt="Card image cap">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <h5 class="card-title">Mie Goreng</h5>
+                                <p class="card-text">dari mie yang dibeli dari minimarket terdekat.</p>
+                                <a href="#" class="btn btn-primary">Go Menu</a>
                             </div>
                         </div>
                         <div class="card" style="width: 18rem; margin-right: 30px">
-                            <img class="card-img-top" src="{{asset('Gambar')}}/Ayam Bakar.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="{{asset('Gambar')}}/nasigoreng.jpg" alt="Card image cap">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <h5 class="card-title">Nasi Goreng</h5>
+                                <p class="card-text">nasi yang digoreng dengan minyak yang sedikit agar rendah kalori dan sehat untuk lambung sobat misqueen.</p>
+                                <a href="#" class="btn btn-primary">Go Menu</a>
                             </div>
                         </div>
                         <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="{{asset('Gambar')}}/Ayam Bakar.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="{{asset('Gambar')}}/potato-chips-cure-cramps.jpg" alt="Card image cap">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <h5 class="card-title">Kripik Kentang</h5>
+                                <p class="card-text">kentang yang ditanam sendiri dan digoreng dengan suhu yang stabil hingga garing.</p>
+                                <a href="#" class="btn btn-primary">Go Menu</a>
                             </div>
                         </div>
                     </div>
