@@ -69,7 +69,7 @@
         </div>
     @endif
     <div class="container align-items-center justify-content-center">
-        <div style="text-align: center; background-color: #EE99A0; padding: 70px; margin: 20px">
+        <div class="rounded" style="text-align: center; background-color: #EE99A0; padding: 70px; margin: 20px">
             <h1 style="color: #D3E0EA">OUR MENU</h1>
         </div>
         <nav class="nav nav-pills nav-kategori  nav-justified mb-5">
