@@ -35,7 +35,7 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        <div class="jumbotron" style="background-color: #E1D3D3">
+        <div class="jumbotron" style="background-color: #E1D3D3" data-aos="zoom-in">
             <div class="container d-flex justify-content-center">
                 <h1 class="display-4">SANS <br> DANGER <br> POUR LE <br> PORTEFEUILLE</h1><br/>
                 <p class="lead">Restoran pertama dengan nuansa Perancis <br> yang menyediakan berbagai menu <br>berkelas namun tetap<br> aman untuk dompet</p>
@@ -48,7 +48,7 @@
                     <a class="display-4" style="font-size: 20px">Menu</a>
                     <h2 class="display-4" style="font-size: 20px; color: #C98787">asdasd</h2>
                     <div style="display: flex" class="d-flex justify-content-center">
-                        <div class="card" style="width: 18rem; margin-right: 30px">
+                        <div class="card" style="width: 18rem; margin-right: 30px" data-aos="zoom-in">
                             <img class="card-img-top" src="{{asset('Gambar')}}/miegoreng.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">Mie Goreng</h5>
@@ -56,7 +56,7 @@
                                 <a href="/menu" class="btn btn-primary">Go Menu</a>
                             </div>
                         </div>
-                        <div class="card" style="width: 18rem; margin-right: 30px">
+                        <div class="card" style="width: 18rem; margin-right: 30px" data-aos="zoom-in">
                             <img class="card-img-top" src="{{asset('Gambar')}}/nasigoreng.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">Nasi Goreng</h5>
@@ -64,7 +64,7 @@
                                 <a href="/menu" class="btn btn-primary">Go Menu</a>
                             </div>
                         </div>
-                        <div class="card" style="width: 18rem;">
+                        <div class="card" style="width: 18rem;" data-aos="zoom-in">
                             <img class="card-img-top" src="{{asset('Gambar')}}/potato-chips-cure-cramps.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">Kripik Kentang</h5>

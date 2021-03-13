@@ -1,5 +1,5 @@
 <div class="mx-4 mb-4">
-    <div class="card" style="width: 17rem;" data-aos="fade-left" >
+    <div class="card" style="width: 17rem;" data-aos="fade-up" >
         {{-- <img class="card-img-top" src="https://source.unsplash.com/random/200x150" alt="Card image cap"> --}}
         <?= '<img src="data:image/jpeg;base64,'.base64_encode($item->Gambar).'" style="width: 100%; height: 220px; object-fit: cover;" alt="'.$item->Nama.'"/>'; ?>
         {{-- <img src="data:image/jpeg;base64,'.base64_encode({{$item->Gambar}}).'"/> --}}

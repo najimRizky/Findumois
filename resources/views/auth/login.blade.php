@@ -120,7 +120,7 @@
             <nav class="navbar navbar-expand-lg navbar-light py-3">
                 <div class="container">
                     <!-- Navbar Brand -->
-                    <a href="#" class="navbar-brand">
+                    <a href="/" class="navbar-brand">
                         <img src="{{asset('Gambar')}}/Logo_Findumois.png"
                             alt="logo" width="150">
                     </a>
