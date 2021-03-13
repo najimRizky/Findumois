@@ -60,6 +60,14 @@
 @endsection
 
 @section('content')
+    @if (session('message'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{session('message')}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    @endif
     <div class="container align-items-center justify-content-center">
         <div class="rounded" style="text-align: center; background-color: #EE99A0; padding: 70px; margin: 20px">
             <h1 style="color: #D3E0EA">OUR MENU</h1>
@@ -81,5 +89,18 @@
             $('[data-toggle="popover"]').popover();   
             $('[data-toggle="popover"]').on('click', function(e) {e.preventDefault(); return true;});
         });
+
+        function showTotal(harga,id){
+            jml = document.getElementById("jumlah"+id).value;
+            total = harga*jml;
+            if(jml>=0 && jml<=50){
+                document.getElementById('total'+id).innerHTML = "Rp"+total.toLocaleString('en-US', {maximumFractionDigits:2});
+            }else if(jml>50){
+                document.getElementById('total'+id).innerHTML = "Maksimal 50";
+            }
+            else{
+                document.getElementById('total'+id).innerHTML = "Minimal jumlah 1";
+            }
+        }
     </script>
 @endsection
