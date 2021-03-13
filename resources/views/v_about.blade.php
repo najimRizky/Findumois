@@ -128,7 +128,7 @@
 
             <div class="col-lg-6 mt-4 mt-lg-0">
               <div class="member" data-aos="zoom-in" data-aos-delay="200">
-                <div class="pic"><img src="{{asset('Gambar')}}/coba.jpg" class="img-fluid" alt=""></div>
+                <div class="pic"><img src="{{asset('Gambar')}}/bona.jpg" class="img-fluid" alt=""></div>
                 <div class="member-info">
                   <h4>Bonaventura Sanjaya</h4>
                   <span>Programmer 2</span>
@@ -145,7 +145,7 @@
 
             <div class="col-lg-6 mt-4">
               <div class="member" data-aos="zoom-in" data-aos-delay="300">
-                <div class="pic"><img src="{{asset('Gambar')}}/coba.jpg" class="img-fluid" alt=""></div>
+                <div class="pic"><img src="{{asset('Gambar')}}/filbert.jpg" class="img-fluid" alt=""></div>
                 <div class="member-info">
                   <h4>Filbert Khouwira</h4>
                   <span>Programmer 3</span>
