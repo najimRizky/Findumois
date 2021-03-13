@@ -51,8 +51,8 @@ Route::get('/reload-captcha', [CaptchaServiceController::class, 'reloadCaptcha']
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::group(['middleware' => 'admin'], function(){
-    Route::get('/admin', [AdminController::class, 'index']);
-    Route::get('/admin/viewmenu', [AdminController::class, 'viewMenu']);
+    Route::get('/admin', [AdminController::class, 'viewMenu']);
+    // Route::get('/admin/viewmenu', [AdminController::class, 'viewMenu']);
     Route::get('/admin/addmenu', [AdminController::class, 'addMenu']);
     Route::post('/admin/insert', [AdminController::class, 'insert']);
     Route::get('/admin/editmenu/{id_menu}', [AdminController::class, 'editMenu']);

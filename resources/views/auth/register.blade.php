@@ -183,7 +183,7 @@
                                         <i class="fa fa-calendar" aria-hidden="true"></i>
                                     </span>
                                 </div>
-                                <input id="tgllahir" type="date" name="tgllahir" placeholder="Date of Birth"
+                                <input id="tgllahir" type="date" name="tgllahir" placeholder="Date of Birth" max="2008-01-01" max="1979-12-31" 
                                     class="form-control bg-white border-left-0 border-md @error('tgllahir') is-invalid @enderror" value="{{ old('tgllahir') }}" required autocomplete="tgllahir">
                                 @error('tgllahir')
                                     <span class="invalid-feedback" role="alert">
