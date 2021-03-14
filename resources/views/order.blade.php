@@ -21,8 +21,49 @@
                             <h1 class="text-center">Tidak Ada Riwayat Pemesanan</h1>
                         @else
                             <h5 class="mb-4 text-center">Order History (<span><?= count($data) ?></span> items)</h5>
-                            <?php $total = 0; ?>
+                            <?php 
+                                $total = 0;
+                                $totalPerSection = 0;
+                                $Kodelama=0;
+                                $Kodenow=0;
+                                $sama=false;
+                                $i=0;
+
+                            ?>
                             @foreach ($data as $item)
+                                <?php
+                                    
+                                    if($i==0){
+                                        $Kodelama = $item->Kode_Beli;
+                                        $Kodenow = $item->Kode_Beli;
+                                        $i++;
+                                        $totalPerSection = $item->Harga*$item->Jumlah;
+                                        // $sama = false;
+                                    }else{
+                                        $Kodelama = $Kodenow;
+                                        $Kodenow = $item->Kode_Beli;
+                                        if($Kodelama != $Kodenow){
+                                            $totalPerSection = $item->Harga*$item->Jumlah;
+                                            $sama=false;
+                                        }else{
+                                            $totalPerSection += $item->Harga*$item->Jumlah;
+                                            $sama=true;
+                                        }
+                                    }
+                                    
+                                ?>
+                                <?php 
+                                    if($sama == false){
+                                        echo "<hr class='mb-4' style='border: 1px solid black;'>";
+                                        
+                                    }
+                                ?>
+                                @if ($sama == false)
+                                <div class="align-items-center mb-3">
+                                    <h5 class="text-center" style="font-style:underline;"><u>On: {{date('d-M-Y', strtotime($item->Tanggal))}} || {{date('H:i:s', strtotime($item->Tanggal))}}</u></h5>
+                                </div>
+                                
+                            @endif
                                 <div class="row mb-4">
                                     <div class="col-md-5 col-lg-3 col-xl-3">
                                         <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
@@ -49,18 +90,16 @@
                                                 <p>Total: <strong>Rp<?= number_format($item->Harga*$item->Jumlah) ?>.-</strong></p>
                                                 <?php $total+= $item->Harga*$item->Jumlah; ?>
                                             </div>
-                                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                                <p class="mb-0"><span>Tanggal: {{date('d m Y', strtotime($item->Tanggal))}}</span></p>
-                                                <p class="mb-0"><span>Waktu: {{date('H:i:s', strtotime($item->Tanggal))}}</span></p>
-                                            </div>
+
+                                            
                                         </div>
                                     </div>
                                 </div>
-                                <hr class="mb-4">
                             @endforeach
                             <div class="row justify-content-between">
-                                <div class="col-6">
-                                    <p>Total: <strong>Rp<?= number_format($total) ?>.-</strong></p>
+                                <div class="col-12">
+                                    <hr class='mb-4' style='border: 1px solid black;'>
+                                    <h5>Total Keseluruhan: <strong>Rp<?= number_format($total) ?>.-</strong></h5>
                                 </div>
                             </div>
                         @endif

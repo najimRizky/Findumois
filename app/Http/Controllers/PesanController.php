@@ -125,6 +125,7 @@ class PesanController extends Controller
             if($tmp!= null){
                 $tmp->Jumlah = $item->jumlah;
                 $tmp->Tanggal = $item->tanggal;
+                $tmp->Kode_Beli = $item->kode_pembelian;
                 array_push($data2['data'],$tmp);
             }
         }

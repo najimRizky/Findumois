@@ -18,15 +18,15 @@ use App\Http\Controllers\CaptchaServiceController;
 |
 */
 
-//User
+//Guest
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/menu', [MenuController::class, 'index']);
 Route::get('/menu/{kategori}', [MenuController::class, 'showByKategori']);
-// Route::get('/pesan/{id}',[PesanController::class, 'index']);
+Route::view('/aboutus','v_about');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'home']);
 
 
-// Admin //
-
+// User Logged In //
 Route::group(['middleware' => 'user'], function(){
     Route::post('/pesan/langsung', [PesanController::class, 'submitOrder']);
     Route::get('/keranjang', [PesanController::class, 'showKeranjang']);
@@ -35,32 +35,26 @@ Route::group(['middleware' => 'user'], function(){
     Route::get('/order', [PesanController::class, 'history']);
     Route::get('/deleteCart/{id_menu}/{email}',[PesanController::class, 'deleteDariKeranjang']);
     Route::post('/cart/edit', [PesanController::class, 'updateKeranjang']);
-
 });
-
-
-// Route::get('/menu/{id_menu}', [HomeController::class, 'menu']);
-
-Route::view('/aboutus','v_about');
 
 Auth::routes();
 
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'home']);
-
+//Captcha
 Route::get('/contact-form', [CaptchaServiceController::class, 'index']);
 Route::post('/captcha-validation', [CaptchaServiceController::class, 'capthcaFormValidate']);
 Route::get('/reload-captcha', [CaptchaServiceController::class, 'reloadCaptcha']);
 
-// Auth::routes();
-
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Admin;
 Route::group(['middleware' => 'admin'], function(){
     Route::get('/admin', [AdminController::class, 'viewMenu']);
-    // Route::get('/admin/viewmenu', [AdminController::class, 'viewMenu']);
     Route::get('/admin/addmenu', [AdminController::class, 'addMenu']);
     Route::post('/admin/insert', [AdminController::class, 'insert']);
     Route::get('/admin/editmenu/{id_menu}', [AdminController::class, 'editMenu']);
     Route::post('/admin/update', [AdminController::class, 'update']);
     Route::get('/admin/delete/{id_menu}', [AdminController::class, 'deleteMenu']);
 });
+
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/admin/viewmenu', [AdminController::class, 'viewMenu']);

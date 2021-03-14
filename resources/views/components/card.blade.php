@@ -10,11 +10,9 @@
             <div class="row justify-content-around">
                 <button  class="btn btn-link" style="color: red; font-weight: bold; font-style: underline;" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="{{$item->Deskripsi}}">+ Detail</button>
                 @guest
-                <a href="/login" class="btn btn-warning " style="font-weight: bold">Pesan <br></a>
+                    <a href="/login" class="btn btn-warning " style="font-weight: bold">Pesan <br></a>
                 @else
-                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal{{$item->ID}}">
-                    Pesan
-                </button>
+                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal{{$item->ID}}">Pesan</button>
                 @endguest
             </div>
         </div>

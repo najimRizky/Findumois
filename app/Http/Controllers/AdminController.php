@@ -12,6 +12,7 @@ class AdminController extends Controller
     {
         $this->AdminModel = new AdminModel();
         $this->MenuModel = new MenuModel();
+        $this->middleware('auth');
     }
     public function index()
     {
