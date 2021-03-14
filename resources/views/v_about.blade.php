@@ -164,10 +164,9 @@
                   <span>Programmer 4</span>
                   <p>00000037928</p>
                   <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook-f"></i></a>
-                    <a href=""><i class="fa fa-instagram"></i></a>
-                    <a href=""> <i class="fa fa-google"></i> </a>
+                    <a href="https://github.com/kejauhan"><i class="fa fa-github"></i></a>
+                    <a href="https://twitter.com/farhaannmf"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/farhannmf_/"><i class="fa fa-instagram"></i></a>
                   </div>
                 </div>
               </div>
