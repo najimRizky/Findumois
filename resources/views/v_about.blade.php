@@ -149,10 +149,9 @@
                   <span>Programmer 3</span>
                   <p>00000039724</p>
                   <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook-f"></i></a>
-                    <a href=""><i class="fa fa-instagram"></i></a>
-                    <a href=""> <i class="fa fa-google"></i> </a>
+                    <a href="https://github.com/filbert29"><i class="fa fa-github"></i></a>
+                    <a href="https://www.facebook.com/filbert.khouwira.5"><i class="fa fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/filbertkhouwira/"><i class="fa fa-instagram"></i></a>
                   </div>
                 </div>
               </div>
