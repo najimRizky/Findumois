@@ -71,6 +71,16 @@ class PesanController extends Controller
         return redirect('/menu')->with('message', 'Pesanan berhasil dimasukkan ke keranjang');
     }
 
+    public function updateKeranjang(){
+        $data = [
+            'id_menu' => Request()->id_menu,
+            'jumlah' => Request()->jumlah,
+            'email' => Request()->email,
+        ];  
+        $this->PesanModel->updateCart($data, Request()->id_menu, Request()->email);
+        return redirect('/keranjang')->with('message', 'Keranjang berhasil diupdate');
+    }
+
     public function pesanDariKeranjang(){
         $email = Auth::user()->email;
         $data = array();
@@ -95,8 +105,9 @@ class PesanController extends Controller
         return redirect('/keranjang')->with('message', 'Checkout pesanan berhasil');
     }
 
-    public function deleteDariKeranjang(){
-        //coming soon
+    public function deleteDariKeranjang($id, $email){
+        $this->PesanModel->deleteOneCart($email, $id);
+        return redirect('/keranjang')->with('message', 'Item berhasil di delete');
     }
 
     public function history(){

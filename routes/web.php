@@ -33,6 +33,9 @@ Route::group(['middleware' => 'user'], function(){
     Route::get('/keranjang/{id_menu}/{jumlah}', [PesanController::class, 'setKeranjang']);
     Route::get('/checkout', [PesanController::class, 'pesanDariKeranjang']);
     Route::get('/order', [PesanController::class, 'history']);
+    Route::get('/deleteCart/{id_menu}/{email}',[PesanController::class, 'deleteDariKeranjang']);
+    Route::post('/cart/edit', [PesanController::class, 'updateKeranjang']);
+
 });
 
 

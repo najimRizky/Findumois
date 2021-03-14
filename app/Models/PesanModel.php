@@ -22,12 +22,20 @@ class PesanModel extends Model
         }
     }
 
+    public function updateCart($data, $id, $email){
+        DB::table('cart')->where('email',$email)->where('id_menu',$id)->update($data);
+    }
+
     public function getCart($email){
         return DB::table('cart')->where('email',$email)->get();
     }
 
     public function deleteCart($email){
         DB::table('cart')->where('email', $email)->delete();
+    }
+
+    public function deleteOneCart($email, $id){
+        DB::table('cart')->where('email', $email)->where('id_menu',$id)->delete();
     }
 
     public function getLastKodeBeli(){
