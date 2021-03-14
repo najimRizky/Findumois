@@ -68,8 +68,8 @@
                     @else
                     <ul>
                         <li style="display: inline-block;">
-                            <a href="/keranjang" type="button" class="btn btn-primary">
-                                <i class="fa fa-shopping-cart mr-2"></i><span class="badge badge-light"></span>
+                            <a href="/keranjang" type="button" class="btn btn-info">
+                                <i class="fa fa-shopping-cart "></i><span class="badge badge-light"></span>
                                 {{-- <span class="sr-only">unread messages</span> --}}
                             </a>
                         </li>
