@@ -53,8 +53,10 @@ class PesanController extends Controller
         $tmp = array();
         foreach($data['data'] as $item){
             $tmp = $this->MenuModel->detailMenu($item->id_menu);
-            $tmp->Jumlah = $item->jumlah;
-            array_push($data2['data'],$tmp);
+            if($tmp!= null){
+                $tmp->Jumlah = $item->jumlah;
+                array_push($data2['data'],$tmp);
+            }
         }
         return view('keranjang', $data2);
     }
@@ -120,9 +122,11 @@ class PesanController extends Controller
         $tmp = array();
         foreach($data['data'] as $item){
             $tmp = $this->MenuModel->detailMenu($item->id_menu);
-            $tmp->Jumlah = $item->jumlah;
-            $tmp->Tanggal = $item->tanggal;
-            array_push($data2['data'],$tmp);
+            if($tmp!= null){
+                $tmp->Jumlah = $item->jumlah;
+                $tmp->Tanggal = $item->tanggal;
+                array_push($data2['data'],$tmp);
+            }
         }
         return view('order', $data2);
     }
