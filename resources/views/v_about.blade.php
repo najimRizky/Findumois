@@ -134,10 +134,8 @@
                   <span>Programmer 2</span>
                   <p>00000038083</p>
                   <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook-f"></i></a>
-                    <a href=""><i class="fa fa-instagram"></i></a>
-                    <a href=""> <i class="fa fa-google"></i> </a>
+                    <a href="https://github.com/ayaayawae"><i class="fa fa-github"></i></a>
+                    <a href="https://instagram.com/bonbonzay"><i class="fa fa-instagram"></i></a>
                   </div>
                 </div>
               </div>
