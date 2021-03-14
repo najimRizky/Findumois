@@ -23,6 +23,8 @@
     @yield('style')
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ URL::asset('/css/app.css') }}">
+    <link rel="icon" href="{{ URL::asset('favicon.png') }}" type="image/png"/>
+
 
 </head>
 <body style="background-color: #E1D3D3">
