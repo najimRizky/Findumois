@@ -117,17 +117,16 @@
                   <span>Programmer 1</span>
                   <p>00000040113</p>
                   <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook-f"></i></a>
-                    <a href=""><i class="fa fa-instagram"></i></a>
-                    <a href=""> <i class="fa fa-google"></i> </a>
+                    <a href="https://github.com/najimRizky"><i class="fa fa-github"></i></a>
+                    <a href="https://instagram.com/nazky_r"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/najim-rizky/"> <i class="fa fa-linkedin"></i> </a>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-6 mt-4 mt-lg-0">
-              <div class="member" data-aos="zoom-in" data-aos-delay="200">
+            <div class="col-lg-6">
+              <div class="member" data-aos="zoom-in" data-aos-delay="100">
                 <div class="pic"><img src="{{asset('Gambar')}}/bona.jpg" class="img-fluid" alt=""></div>
                 <div class="member-info">
                   <h4>Bonaventura Sanjaya</h4>
